@@ -1,6 +1,6 @@
 const initialState = {
-    email: "lanice@gmail.com",
-    password: "password"
+    email: "",
+    password: ""
 }
 
 
