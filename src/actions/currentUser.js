@@ -9,13 +9,14 @@ export const setCurrentUser = (user) => {
 //asynchoronus action creators
 
 export const login = (credentials) => {
+  console.log("credentials are", credentials)
   return (dispatch) => {
     return fetch("http://localhost:3000/api/v1/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(email:"lanicemp")
+      body: JSON.stringify()
     });
   };
 };
