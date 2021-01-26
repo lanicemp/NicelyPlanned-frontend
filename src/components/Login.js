@@ -1,29 +1,36 @@
 import React from "react";
 import { connect } from "react-redux";
 import { updateLoginForm } from "../actions/loginForm";
+import {login} from "../actions/currentUser"
 
-const Login = ({ loginForm, updateLoginForm }) => {
+const Login = ({ loginFormData, updateLoginForm, login }) => {
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     const updatedFormInfo = {
-      ...loginForm, 
+      ...loginFormData, 
       [name]: value
     };
     updateLoginForm(updatedFormInfo)
   };
 
+  const handleSubmit = event =>{
+    event.preventDefault()
+    login(loginFormData)
+  }
+
   return (
-    <form onSubmit={null}>
+    <form onSubmit={handleSubmit}>
       <input
         placeholder="email"
-        value={loginForm.email}
+        value={loginFormData.email}
         name="email"
         type="text"
         onChange={handleInputChange}
       />
       <input
         placeholder="password"
-        value={loginForm.password}
+        value={loginFormData.password}
         name="password"
         type="text"
         onChange={handleInputChange}
@@ -37,10 +44,10 @@ const Login = ({ loginForm, updateLoginForm }) => {
 //Taking specific state from the store.
 const mapStateToProps = (state) => {
   return {
- loginForm : state.loginForm
+ loginFormData : state.loginForm
   };
 };
 
 //Connect is a function that takes up to four arguments and returns
 //  a function that takes a compnent and returns a component
-export default connect(mapStateToProps, {updateLoginForm})(Login);
+export default connect(mapStateToProps, {updateLoginForm, login})(Login);
