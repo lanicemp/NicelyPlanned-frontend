@@ -1,3 +1,10 @@
+import { resetLoginForm } from "./loginForm.js"
+
+
+
+
+
+
 //synchronous action creators
 export const setCurrentUser = (user) => {
   return {
@@ -6,32 +13,52 @@ export const setCurrentUser = (user) => {
   };
 };
 
+export const clearCurrentUser = () => {
+  return {
+    type: "CLEAR_CURRENT_USER"
+  }
+}
+
 //asynchoronus action creators
 
 export const login = (credentials, history) => {
-  console.log("credentials are", credentials)
-  return (dispatch) => {
+  return dispatch => {
     return fetch("http://localhost:3000/api/v1/login", {
-      credentials:"include",
-      
+      credentials: "include",
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(credentials)
     })
-    .then(r => r.json())
-    .then( response => {
-      if (response.error){
-        alert(response.error)
-      } else {
-        dispatch(setCurrentUser(response.data))
-      }
-    })
-    .catch(console.log)
-  };
-};
+      .then(r => r.json())
+      .then(response => {
+        if (response.error) {
+          alert(response.error)
+        } else {
+          dispatch(setCurrentUser(response.data))
+          dispatch(resetLoginForm())
+          history.push('/')
+        }
+      })
+      .catch(console.log)
+  }
+}
 // This returns a function that retuns a fecth that I can dispatch as I see fit. 
+
+export const logout = event => {
+  return dispatch => {
+    dispatch(clearCurrentUser())
+    // clears the frontend
+    return fetch('http://localhost:3000/api/v1/logout', {
+      credentials: "include",
+      method: "DELETE"
+    })
+  }
+}
+
+
+
 
 export const getCurrentUser = () => {
   console.log("in action creator getCurrentUser")
