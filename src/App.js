@@ -11,11 +11,12 @@ class App extends React.Component {
 componentDidMount(){
   console.log("in component did Mount")
   this.props.getCurrentUser()
-  console.log(this.props)
-
+ 
 }
 
   render(){
+    const { loggedIn} = this.props
+    
     return (
     this.props.currentUser ? <Logout/> : <Login/>
     );
@@ -29,4 +30,4 @@ const mapStateToProps = state => {
   })
 }
 
-export default connect(mapStateToProps, { getCurrentUser })(App);
+export default withRouter(connect(mapStateToProps, { getCurrentUser })(App));
