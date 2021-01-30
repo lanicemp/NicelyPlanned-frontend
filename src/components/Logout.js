@@ -1,9 +1,11 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {logout} from "../actions/currentUser"
+import { withRouter } from 'react-router-dom'
 
 
 const Logout = ({ logout, history }) => {
+  console.log("in logout")
     return (
       <form onSubmit={(event) => {
           event.preventDefault()
@@ -16,4 +18,4 @@ const Logout = ({ logout, history }) => {
     )
   }
 
-  export default connect(null, {logout})(Logout)
+  export default withRouter(connect(null, { logout } )(Logout))
