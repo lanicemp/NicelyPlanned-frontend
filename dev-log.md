@@ -16,7 +16,12 @@
 - [] think about routes-- adding react router 
 
 #2021-30-01
-- [] add navbar
+- [x] add navbar
+
+
+
+
+
 ##Technical Skills 
 ![JavaScript](https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![React](https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB)
