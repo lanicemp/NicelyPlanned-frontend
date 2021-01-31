@@ -18,7 +18,12 @@
 #2021-30-01
 - [x] add navbar
 
-
+#2021- 31-01
+ - [x] updated meetings index controller action so that I can get the users meetings to load. 
+ - [] add actions
+ - [] reducers
+ - [] state 
+ - [] props
 
 
 
