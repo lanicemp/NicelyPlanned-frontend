@@ -7,10 +7,10 @@
 
 #2021-27-01
 
-- [x]add login functionality using sessions 
+- [x] add login functionality using sessions 
 
 2021-28-01
 - [x] add logout functionality 
 - [] add signup functionality 
-- []think about layout 
+- [] think about layout 
 - [] think about routes-- adding react router 
