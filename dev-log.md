@@ -10,7 +10,7 @@
 add login functionality using sessions 
 
 2021-28-01
-[] add logout functionality 
+[x] add logout functionality 
 [] add signup functionality 
 []think about layout 
 [] think about routes-- adding react router 
