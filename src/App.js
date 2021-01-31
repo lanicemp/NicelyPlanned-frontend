@@ -6,6 +6,7 @@ import {connect} from 'react-redux'
 import {getCurrentUser} from "./actions/currentUser"
 import { Route, Switch, withRouter } from 'react-router-dom'
 import NavBar from './components/NavBar.js'
+import MainContainer from './components/MainContainer'
 
 class App extends React.Component {
 
@@ -19,8 +20,11 @@ componentDidMount(){
     const { loggedIn} = this.props
     
     return (
-    
+    <div className= " App">
   <NavBar/>
+  <MainContainer/>
+  </div>
+
     );
   }
   
