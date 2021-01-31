@@ -1,10 +1,11 @@
 import React from 'react'
 import './App.css';
-import Login from './components/Login'
-import Logout from './components/Logout'
+// import Login from './components/Login'
+// import Logout from './components/Logout'
 import {connect} from 'react-redux'
 import {getCurrentUser} from "./actions/currentUser"
 import { Route, Switch, withRouter } from 'react-router-dom'
+import NavBar from './components/NavBar.js'
 
 class App extends React.Component {
 
@@ -19,7 +20,7 @@ componentDidMount(){
     
     return (
     
-  loggedIn ? <Logout/> : <Login/>
+  <NavBar/>
     );
   }
   
