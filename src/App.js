@@ -18,7 +18,8 @@ componentDidMount(){
     const { loggedIn} = this.props
     
     return (
-    this.props.currentUser ? <Logout/> : <Login/>
+    
+  loggedIn ? <Logout/> : <Login/>
     );
   }
   
