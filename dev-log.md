@@ -11,7 +11,7 @@
 
 2021-28-01
 - [x] add logout functionality 
-- [] add signup functionality 
+- [x] add signup functionality 
 - [] think about layout 
 - [] think about routes-- adding react router 
 
@@ -24,6 +24,11 @@
  - [] reducers
  - [] state 
  - [] props
+ 
+ ##2021-01-02
+ - [] fixed the password digest to makesure the passwords are encrypted. 
+ - [] add home page to store login and signup info
+  
 
 
 
