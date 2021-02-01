@@ -1,7 +1,7 @@
 const initialState = {
     name: "",
     email: "",
-    password_digest: "",
+    password: "",
    
   }
   

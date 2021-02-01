@@ -26,7 +26,7 @@
  - [] props
  
  ##2021-01-02
- - [] fixed the password digest to makesure the passwords are encrypted. 
+ - [x] fixed the password digest to makesure the passwords are encrypted. 
  - [] add home page to store login and signup info
   
 
