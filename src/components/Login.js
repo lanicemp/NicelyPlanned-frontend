@@ -19,7 +19,7 @@ const Login = ({ loginFormData, updateLoginForm, login, history }) => {
   };
 
   return (
-    <div>
+    <div className="Login">
       <h2> Welcome</h2>
       <form onSubmit={handleSubmit}>
         <input
