@@ -7,6 +7,7 @@ import {getCurrentUser} from "./actions/currentUser"
 import { Route, Switch, withRouter } from 'react-router-dom'
 import NavBar from './components/NavBar.js'
 import MainContainer from './components/MainContainer'
+import SignUp from './components/Signup.js'
 
 
 class App extends React.Component {
@@ -24,6 +25,7 @@ componentDidMount(){
     <div className= " App">
   <NavBar/>
   <MainContainer/>
+  <SignUp/>
   </div>
 
     );
