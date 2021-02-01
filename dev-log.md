@@ -27,7 +27,9 @@
  
  ##2021-01-02
  - [x] fixed the password digest to makesure the passwords are encrypted. 
- - [] add home page to store login and signup info
+ - [x] add home page to store login and signup info
+ - [] get meeting to populate on page once logged in
+ - [] add add meeting and view all meetings to the navbar
   
 
 
