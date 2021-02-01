@@ -1,4 +1,5 @@
 import { resetLoginForm } from "./loginForm.js"
+import { getMyMeetings } from "./myMeetings.js"
 
 
 
@@ -38,6 +39,7 @@ export const login = (credentials, history) => {
           alert(response.error)
         } else {
           dispatch(setCurrentUser(response.data))
+          dispatch(getMyMeetings())
           dispatch(resetLoginForm())
           history.push('/')
         }
