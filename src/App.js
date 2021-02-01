@@ -8,6 +8,7 @@ import { Route, Switch, withRouter } from 'react-router-dom'
 import NavBar from './components/NavBar.js'
 import MainContainer from './components/MainContainer'
 
+
 class App extends React.Component {
 
 componentDidMount(){
@@ -17,7 +18,7 @@ componentDidMount(){
 }
 
   render(){
-    const { loggedIn} = this.props
+    const { loggedIn, meetings} = this.props
     
     return (
     <div className= " App">
