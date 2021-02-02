@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import { NavLink } from 'react-router-dom'
 import Login from './Login'
 import Logout from './Logout'
 
@@ -8,8 +9,11 @@ const NavBar = ({ currentUser, loggedIn}) => {
   console.log(currentUser)
     return (
       <div className="NavBar">
-      { currentUser ? <h2> Welcome {currentUser.attributes.name}</h2>: ""}
-      {currentUser ? <Logout/> : <Login/> }
+         <NavLink exact activeClassName="active" to="/meetings"  >My Meetings</NavLink>
+         <br></br>
+      <NavLink exact activeClassName="active" to="/meetings/new" >New Meeting</NavLink>
+      { loggedIn ? <><h2 id="loggedin">Welcome {currentUser.attributes.name}</h2><Logout/></> : null}
+      
     </div>
      
     )
