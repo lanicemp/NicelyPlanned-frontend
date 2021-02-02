@@ -1,4 +1,4 @@
-export const updatemeetingForm = (name, value) => {
+export const updateMeetingForm = (name, value) => {
     const formData = { name, value }
     return {
       type: "UPDATE_NEW_MEETING_FORM",
@@ -6,7 +6,7 @@ export const updatemeetingForm = (name, value) => {
     }
   }
   
-  export const resetmeetingForm = () => {
+  export const resetMeetingForm = () => {
     return {
       type: "RESET_NEW_MEETING_FORM",
     }
