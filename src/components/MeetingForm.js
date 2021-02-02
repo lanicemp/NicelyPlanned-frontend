@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 
 
 const MeetingForm = ({ formData, updateMeetingForm, userId, meeting, handleSubmit, editMode }) => {
+  
 
     const { title, start_time, end_time, date, detail, comment } = formData
   
@@ -27,6 +28,24 @@ const MeetingForm = ({ formData, updateMeetingForm, userId, meeting, handleSubmi
             name="title"
             onChange={handleChange}
             value={title}
+          /><br/> 
+          <input
+          placeholder="detail"
+          name="detail"
+          onChange={handleChange}
+          value={detail}
+        /><br/>
+         <input
+            placeholder="date"
+            name="date"
+            onChange={handleChange}
+            value={date}
+          /><br/>
+           <input
+            placeholder="comment"
+            name="comment"
+            onChange={handleChange}
+            value={comment}
           /><br/>
           <input
             placeholder="start time"
