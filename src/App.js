@@ -9,6 +9,7 @@ import NavBar from "./components/NavBar.js";
 import MainContainer from "./components/MainContainer";
 import Signup from "./components/Signup.js";
 import Home from "./components/Home.js";
+import NewMeetingFormWrapper from './components/NewMeetingFormWrapper.js'
 
 class App extends React.Component {
   componentDidMount() {
@@ -25,6 +26,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/signup" render={({ history }) => <Signup history={history} />} />
           <Route exact path="/login" component={Login} />
+          <Route exact path='/meetings/new' component={NewMeetingFormWrapper}/>
         </Switch>
         {loggedIn ? <MainContainer /> : ""}
        
