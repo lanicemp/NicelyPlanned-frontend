@@ -21,12 +21,12 @@ class App extends React.Component {
 
     return (
       <div className=" App">
-        {loggedIn ? <NavBar location={this.props.location} /> : <Home />}
+        {loggedIn ? <NavBar meeting={this.props.meetings} /> : <Home />}
         <Switch>
           <Route exact path="/signup" render={({ history }) => <Signup history={history} />} />
           <Route exact path="/login" component={Login} />
         </Switch>
-        {/* <MainContainer /> */}
+        {loggedIn ? <MainContainer /> : ""}
        
       </div>
     );
