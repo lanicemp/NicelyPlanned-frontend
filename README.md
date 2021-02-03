@@ -5,14 +5,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
+localhost:3000 to view api data 
+localhost:4000 to run application. 
 
 ### `yarn start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3000](http://localhost:4000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+if localhost:4000 is not running run 'export PORT=4000' in terminal to connect. 
 
 ### `yarn test`
 
