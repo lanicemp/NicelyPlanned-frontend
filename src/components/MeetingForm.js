@@ -5,9 +5,10 @@ import { connect } from 'react-redux'
 
 
 const MeetingForm = ({ formData, updateMeetingForm, userId, meeting, handleSubmit, editMode }) => {
-  
+  //
 
-    const { title, start_time, end_time, date, detail, comment } = formData
+
+    const  { title, start_time, end_time, date, detail, comment } = formData
   
     const handleChange = event => {
       console.log("trigger Handle change")
@@ -57,7 +58,7 @@ const MeetingForm = ({ formData, updateMeetingForm, userId, meeting, handleSubmi
             placeholder="End Time "
             name="endTime "
             onChange={handleChange}
-            value={end_time }
+            value={end_time}
           /><br/>
           <input
             type="submit"
