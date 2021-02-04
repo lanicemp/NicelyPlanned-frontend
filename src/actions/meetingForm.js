@@ -1,5 +1,6 @@
 export const updateMeetingForm = (name, value) => {
     const formData = { name, value }
+    console.log("formData", formData)
     return {
       type: "UPDATE_NEW_MEETING_FORM",
       formData
