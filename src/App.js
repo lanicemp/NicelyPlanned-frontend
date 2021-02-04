@@ -31,7 +31,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/signup" render={({ history }) => <Signup history={history} />} />
           <Route exact path="/login" component={Login} />
-          <Route exact path='/meetings' component={MyMeetings}/>
+          {/* <Route exact path='/meetings' component={MyMeetings}/> */}
           <Route exact path='/meetings/new' component={NewMeetingFormWrapper}/>
           <Route exact path='/meetings/:id' render={props => {
               // I need to get ???
