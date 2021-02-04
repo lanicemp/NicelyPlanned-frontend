@@ -6,6 +6,7 @@ const initialState = {
     detail: "",
     comment: "",
 
+
   }
   
   export default (state=initialState, action) => {
