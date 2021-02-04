@@ -1,7 +1,11 @@
 const initialState = {
-    name: "",
-    startDate: "",
-    endDate: "",
+    title: "",
+    start_time: "",
+    end_time: "",
+    date: "",
+    detail: "",
+    comment: "",
+
   }
   
   export default (state=initialState, action) => {
