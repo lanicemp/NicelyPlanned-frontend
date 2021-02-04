@@ -33,13 +33,13 @@ class App extends React.Component {
           <Route exact path="/login" component={Login} />
           {/* <Route exact path='/meetings' component={MyMeetings}/> */}
           <Route exact path='/meetings/new' component={NewMeetingFormWrapper}/>
-          <Route exact path='/meetings/:id' render={props => {
+          {/* <Route exact path='/meetings/:id' render={props => {
               // I need to get ???
               const meeting = meetings.find(meeting => meeting.id === props.match.params.id)
               console.log(meeting)
               return <MeetingCard meeting={meeting} {...props}/>
-            }
-          }/>
+            } */}
+          {/* }/> */}
         </Switch>
         {loggedIn ? <MainContainer /> : ""}
        
