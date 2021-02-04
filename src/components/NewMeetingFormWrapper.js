@@ -6,6 +6,8 @@ import { connect } from 'react-redux'
 const NewMeetingFormWrapper = ({ history, createMeeting }) => {
 
   const handleSubmit = (formData, userId) => {
+    console.log("usedId", userId)
+  console.log("formData in wrapper", formData)
     createMeeting({
       ...formData,
       userId
