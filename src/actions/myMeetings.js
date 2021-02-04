@@ -59,15 +59,17 @@ export const getMyMeetings = () => {
 
 export const createMeeting = (meetingData, history) => {
   return (dispatch) => {
+    console.log("meetingData", meetingData)
     const sendableMeetingData = {
-      start_time: meetingData.startDate,
-      end_time: meetingData.endDate,
+      start_time: meetingData.start_time,
+      end_time: meetingData.end_time,
       title: meetingData.title,
       detail: meetingData.detail,
       comment: meetingData.comment,
       date: meetingData.date,
       user_id: meetingData.userId,
     };
+    console.log("sendableMeetingDatata", sendableMeetingData)
     return fetch("http://localhost:3000/api/v1/meetings", {
       credentials: "include",
       method: "POST",
@@ -82,6 +84,7 @@ export const createMeeting = (meetingData, history) => {
           alert(resp.error);
         } else {
           dispatch(addMeeting(resp.data));
+          console.log("resp.data", resp.data)
           dispatch(resetMeetingForm());
           history.push(`/meetings/${resp.data.id}`);
           // go somewhere else --> meeting show?
