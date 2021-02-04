@@ -6,7 +6,7 @@ import Logout from './Logout'
 
 const NavBar = ({ currentUser, loggedIn}) => {
   console.log("in navbar")
-  console.log(currentUser)
+  console.log("current user", currentUser)
     return (
       <div className="NavBar">
          <NavLink exact activeClassName="active" to="/meetings"  >My Meetings</NavLink>
