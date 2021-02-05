@@ -97,9 +97,13 @@ export const createMeeting = (meetingData, history) => {
 export const updateMeeting = (meetingData, history) => {
   return dispatch => {
     const sendableMeetingData = {
-      start_date: meetingData.startDate,
-      end_date: meetingData.endDate,
-      name: meetingData.name
+      start_time: meetingData.start_time,
+      end_time: meetingData.end_time,
+      title: meetingData.title,
+      detail: meetingData.detail,
+      comment: meetingData.comment,
+      date: meetingData.date,
+      user_id: meetingData.userId,
     }
     return fetch(`http://localhost:3000/api/v1/meetings/${meetingData.meetingId}`, {
       credentials: "include",
