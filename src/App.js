@@ -24,6 +24,7 @@ class App extends React.Component {
 
   render() {
     const { loggedIn, meetings } = this.props;
+    console.log("meetings", meetings)
 
     return (
       <div className=" App">
@@ -33,13 +34,13 @@ class App extends React.Component {
           <Route exact path="/login" component={Login} />
           {/* <Route exact path='/meetings' component={MyMeetings}/> */}
           <Route exact path='/meetings/new' component={NewMeetingFormWrapper}/>
-          {/* <Route exact path='/meetings/:id' render={props => {
+          <Route exact path='/meetings/:id' render={props => {
               // I need to get ???
               const meeting = meetings.find(meeting => meeting.id === props.match.params.id)
               console.log(meeting)
               return <MeetingCard meeting={meeting} {...props}/>
-            } */}
-          {/* }/> */}
+            } 
+          }/>
         </Switch>
         {loggedIn ? <MainContainer /> : ""}
        
@@ -48,7 +49,9 @@ class App extends React.Component {
   }
 }
 const mapStateToProps = (state) => {
+  console.log("state", state)
   return ({
+  
     loggedIn: !!state.currentUser,
     meetings: state.myMeetings
   });
