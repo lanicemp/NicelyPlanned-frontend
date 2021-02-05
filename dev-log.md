@@ -20,14 +20,20 @@
 
 #2021- 31-01
  - [x] updated meetings index controller action so that I can get the users meetings to load. 
- - [] add actions
- - [] reducers
- - [] state 
- - [] props
+ - [x] add actions
+ - [x] reducers
+ - [x] state 
+ - [x] props
  
  ##2021-01-02
  - [x] fixed the password digest to makesure the passwords are encrypted. 
  - [x] add home page to store login and signup info
+ 
+ ##2021-01-03
+ - [x] created meeting form
+ - [x] connected form to the rails api 
+ 
+ ##2021-04-02
  - [] get meeting to populate on page once logged in
  - [] add add meeting and view all meetings to the navbar
  - [] stop login and signup form from populating on the back button
