@@ -3,9 +3,11 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 const MyMeetings = props => {
+  console.log("MyMeeting component props", props)
     // const meetingCards = props.meetings.length > 0 ?
     // props.meetings.map(t => (<p key={t.id}><Link to={`/meetings/${t.id}`}>{t.attributes.name}</Link></p>)) :
     // null
+    
     let today = new Date()
      let dd = String(today.getDate()).padStart(2, '0');
      let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
@@ -16,8 +18,9 @@ const MyMeetings = props => {
  
   return(
       <p> in My Meetings</p>,
-    //   meetingCards
-    <h3>{today}</h3>
+      <h3>{today}</h3>
+      // meetingCards
+    
 
   )
 
