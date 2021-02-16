@@ -1,6 +1,9 @@
 import React from 'react'
 import MyMeetings from './MyMeetings'
 
+import MeetingCard from './MeetingCard'
+
+
 
 const MainContainer = () => {
   return (
@@ -9,6 +12,7 @@ const MainContainer = () => {
      <p> Im in Main Container</p>
      
      <MyMeetings/>
+     
     </div>
   )
 }
