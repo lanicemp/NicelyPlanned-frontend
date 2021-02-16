@@ -2,7 +2,10 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 const MeetingCard = ({ meeting }) => {
+
+  const date= new Date(meeting.attributes.start_time) 
   console.log("meeting in Card", meeting)
+  console.log("date", date)
   return (
     meeting ?
       <div>
