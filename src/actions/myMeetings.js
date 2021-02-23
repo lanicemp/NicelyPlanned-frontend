@@ -3,6 +3,7 @@ import {resetMeetingForm} from './meetingForm'
 
 
 export const setMyMeetings = (meetings) => {
+  console.log("setMyMeetings", meetings)
   return {
     type: "SET_MY_MEETINGS",
     meetings,
@@ -47,6 +48,7 @@ export const getMyMeetings = () => {
     })
       .then((r) => r.json())
       .then((response) => {
+        console.log({response})
         if (response.error) {
           alert(response.error);
         } else {
