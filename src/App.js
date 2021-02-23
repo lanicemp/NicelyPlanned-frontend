@@ -4,6 +4,7 @@ import Login from "./components/Login";
 // import Logout from './components/Logout'
 import { connect } from "react-redux";
 import { getCurrentUser } from "./actions/currentUser";
+import {getMyMeetings} from "./actions/myMeetings" 
 import { Route, Switch, withRouter } from "react-router-dom";
 import NavBar from "./components/NavBar.js";
 import MainContainer from "./components/MainContainer";
@@ -16,6 +17,7 @@ class App extends React.Component {
   componentDidMount() {
     console.log("in component did Mount");
     this.props.getCurrentUser();
+   
     // this.props.getMyMeetings()
     // console.log(getMyMeetings())
   }
