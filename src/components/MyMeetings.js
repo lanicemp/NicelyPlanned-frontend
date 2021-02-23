@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {Componet} from "react";
+import {getMyMeetings} from "../actions/myMeetings"
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
@@ -13,13 +14,14 @@ const MyMeetings = props => {
      let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
      let  yyyy = today.getFullYear();
      today = mm + '/' + dd + '/' + yyyy;
-    
+
+  
 
  
   return(
       <p> in My Meetings</p>,
       <h3>{today}</h3>
-      // meetingCards
+      //  meetingCards
     
 
   )
@@ -37,8 +39,9 @@ const MyMeetings = props => {
 // to this particular component as props."
 
 const mapStateToProps = state => {
+  console.log("state in MyMeetings", state)
   return {
-    meetings: state.MyMeetings
+    meetings: state.meetings
   }
 }
 
