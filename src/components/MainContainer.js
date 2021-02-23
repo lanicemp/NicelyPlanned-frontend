@@ -1,7 +1,7 @@
 import React from 'react'
 import MyMeetings from './MyMeetings'
 
-import MeetingCard from './MeetingCard'
+
 
 
 
