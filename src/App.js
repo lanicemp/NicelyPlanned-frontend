@@ -12,6 +12,8 @@ import Signup from "./components/Signup.js";
 import Home from "./components/Home.js";
 import NewMeetingFormWrapper from "./components/NewMeetingFormWrapper";
 import MeetingCard from "./components/MeetingCard";
+import MyMeetings from "./components/MyMeetings"
+// nicely-planned-client/src/components/MyMeetings.js
 
 class App extends React.Component {
   componentDidMount() {
@@ -36,13 +38,15 @@ class App extends React.Component {
             render={({ history }) => <Signup history={history} />}
           />
           <Route exact path="/login" component={Login} />
-          {/* <Route exact path='/meetings' component={MyMeetings}/> */}
+          <Route exact path='/meetings' component={MyMeetings}/>
           <Route exact path="/meetings/new" component={NewMeetingFormWrapper} />
           <Route
             exact
             path="/meetings/:id"
             render={(props) => {
               // I need to get ???
+              console.log(props)
+              console.log(meetings)
               const meeting = meetings.find(
                 (meeting) => meeting.id === props.match.params.id
               );
@@ -60,7 +64,7 @@ const mapStateToProps = (state) => {
   console.log("state", state);
   return {
     loggedIn: !!state.currentUser,
-    meetings: state.myMeetings,
+    // meetings: state.myMeetings,
   };
 };
 
