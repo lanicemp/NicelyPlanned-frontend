@@ -48,11 +48,13 @@ export const getMyMeetings = () => {
     })
       .then((r) => r.json())
       .then((response) => {
+        // debugger
         console.log({response})
         if (response.error) {
           alert(response.error);
         } else {
-          dispatch(setMyMeetings(response.data));
+          dispatch(setMyMeetings(response));
+          //send the 
         }
       })
       .catch(console.log);
