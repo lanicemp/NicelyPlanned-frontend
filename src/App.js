@@ -31,7 +31,9 @@ class App extends React.Component {
 
     return (
       <div className=" App">
+        
         {loggedIn ? <NavBar meeting={this.props.meetings} /> : <Home />}
+        {/* <div className="main-page"> */}
         <Switch>
           <Route
             exact
@@ -59,7 +61,9 @@ class App extends React.Component {
             }}
           />
         </Switch>
+        
         {loggedIn ? <MainContainer /> : ""}
+        {/* </div> */}
       </div>
     );
   }
