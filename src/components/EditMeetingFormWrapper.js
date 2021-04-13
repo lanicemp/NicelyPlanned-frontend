@@ -29,6 +29,7 @@ class EditMeetingFormWrapper extends React.Component {
     const { history, deleteMeeting, meeting } = this.props
     const meetingId = meeting ? meeting.id : null
     return  <>
+              <h1>In Edit Form Wrapper</h1>
               <MeetingForm editMode handleSubmit={this.handleSubmit} />
               <br/>
               <button style={{color: "red"}} onClick={()=>deleteMeeting(meetingId, history)}>Delete this meeting</button>
