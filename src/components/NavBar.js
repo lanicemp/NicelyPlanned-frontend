@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import { NavLink } from 'react-router-dom'
+import "../CSS/NavBar.css"
 
 import Logout from './Logout'
 
@@ -12,7 +13,7 @@ const NavBar = ({ currentUser, loggedIn}) => {
          <NavLink exact activeClassName="active" to="/meetings"  >My Meetings</NavLink>
          <br></br>
       <NavLink exact activeClassName="active" to="/meetings/new" >New Meeting</NavLink>
-      { loggedIn ? <><h2 id="loggedin">Welcome {currentUser.attributes.name}</h2><Logout/></> : null}
+      { loggedIn ? <><h2 id="loggedin">{currentUser.attributes.name}</h2><Logout/></> : null}
       
     </div>
      
