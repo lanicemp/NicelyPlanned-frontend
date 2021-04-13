@@ -13,6 +13,7 @@ import Home from "./components/Home.js";
 import NewMeetingFormWrapper from "./components/NewMeetingFormWrapper";
 import MeetingCard from "./components/MeetingCard";
 import MyMeetings from "./components/MyMeetings"
+import EditMeetingFormWrapper from "./components/EditMeetingFormWrapper";
 // nicely-planned-client/src/components/MyMeetings.js
 
 class App extends React.Component {
@@ -25,8 +26,8 @@ class App extends React.Component {
   }
 
   render() {
-    const { loggedIn, meetings } = this.props;
-    console.log("meetings", meetings);
+    const { loggedIn, myMeetings } = this.props;
+    console.log("meetings",  myMeetings);
 
     return (
       <div className=" App">
@@ -40,17 +41,20 @@ class App extends React.Component {
           <Route exact path="/login" component={Login} />
           <Route exact path='/meetings' component={MyMeetings}/>
           <Route exact path="/meetings/new" component={NewMeetingFormWrapper} />
+          <Route exact path={`/meetings/:id/edit`} component={EditMeetingFormWrapper} />
           <Route
             exact
             path="/meetings/:id"
             render={(props) => {
               // I need to get ???
               console.log(props)
-              console.log(meetings)
-              const meeting = meetings.find(
-                (meeting) => meeting.id === props.match.params.id
+              console.log( myMeetings)
+              const meeting = myMeetings.find(
+                (meeting) => { console.log(meeting, props.match.params.id);
+                  return meeting.id.toString() === props.match.params.id
+              }
               );
-              console.log(meetings);
+              console.log( myMeetings);
               return <MeetingCard meeting={meeting} {...props} />;
             }}
           />
@@ -64,7 +68,7 @@ const mapStateToProps = (state) => {
   console.log("state", state);
   return {
     loggedIn: !!state.currentUser,
-    // meetings: state.myMeetings,
+     myMeetings: state.myMeetings,
   };
 };
 
